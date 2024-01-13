@@ -66,3 +66,19 @@ renderer.setSize(sizes.width, sizes.height);
 // First renderer, to call the renderer use render() method on renderer with "scene" and "camera" as parameter
 
 renderer.render(scene, camera);
+
+// ######################## LIMITATIONS ########################
+
+// Using Three js like this has many issues, but some main issues are:
+// 1. We only have access to core classes, We can do lot of things but not everyhthing (ex: OrbitalControls).
+
+// 2. When opening an HTML file in browser, our browser won't let JS execute any instructions for security
+// reasons. We won't be able to load local files like textures and models.
+
+// To overcome this problems we will use build tools or bundlers, as we wan t our sites to run online.
+
+// Ex Build tools : Webpack, Vite, Gulp, Parcel etc
+
+// What Build tools do is we write web code like HTML/CSS/JS and "Vite" will build the final website.
+// It will also do other bunch of things like optimisation, other language support, cache breaking(clearing the cache on changes)
+// source mapping and runs local server and many more things
